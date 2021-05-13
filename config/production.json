@@ -1,0 +1,26 @@
+{
+  "debug": true,
+  "applications": [
+    {
+      "name": "Consumer",
+      "type": "consumer",
+      "workers": 3,
+      "rules": [
+        {
+          "logEveryMessage": false
+        }
+      ]
+    },
+    {
+      "name": "Producer",
+      "type": "producer",
+      "workers": 10,
+      "dir": "./tmp",
+      "rules": [
+        {
+          "sleepBeforeSending": 2
+        }
+      ]
+    }
+  ]
+}
